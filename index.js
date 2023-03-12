@@ -16,10 +16,7 @@ app.use(
         corsNext(null, true);
       } else {
         corsNext(
-          createHttpError(
-            400,
-            `Origin ${currentOrigin} is not in the whitelist!`
-          )
+          console.log(`Origin ${currentOrigin} is not in the whitelist!`)
         );
       }
     },
